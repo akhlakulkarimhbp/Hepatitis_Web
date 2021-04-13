@@ -52,6 +52,13 @@ body {
         font-weight: bold;
         font-size: 23px;
     }
+
+    .regis {
+        color: #000000;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
     
     .un {
     width: 76%;
@@ -144,7 +151,7 @@ body {
     
     a {
         text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-        color: #E1BEE7;
+        color: #FFC850;
         text-decoration: none
     }
     
