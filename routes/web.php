@@ -18,13 +18,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('pages.dashboard.dashboard');
     });
-    
-    Route::get('/penduduk', function () {
-        return view('pages.penduduk.index');
-    });
-    
+
     Route::get('/datakriteria', function () {
         return view('pages.datakriteria.index');
+    });
+    
+    /*
+    Route::get('/penduduk', function () {
+        return view('pages.penduduk.index');
     });
     
     Route::get('/datakasus', function () {
@@ -42,6 +43,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/datarumahsehat', function () {
         return view('pages.datarumahsehat.index');
     });
+    */
     
     Route::get('/datainfohepa',  [InfoHepasController::class, 'index'])->name('infohepas.index');
     Route::get('createdata', [InfoHepasController::class, 'create'])->name('infohepas.create');
