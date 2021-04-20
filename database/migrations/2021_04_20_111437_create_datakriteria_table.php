@@ -14,7 +14,12 @@ class CreateDatakriteriaTable extends Migration
     public function up()
     {
         Schema::create('datakriteria', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_kriteria');
+            $table->integer('rumah_sehat');
+            $table->integer('air_bersih');
+            $table->integer('penduduk');
+            $table->integer('kasus');
+            $table->integer('sanitasi');
             $table->timestamps();
         });
     }

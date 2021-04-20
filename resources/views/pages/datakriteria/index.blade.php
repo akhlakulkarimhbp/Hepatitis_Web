@@ -7,7 +7,7 @@
       <div class="col-sm-12">
         <h1 class="m-0">Data Kriteria Hepatitis A</h1>
             <div class="float-left my-3">
-            <a class="btn btn-success"> Tambah Data</a>
+            <a class="btn btn-success">Tambah Data</a>
             </div>
         <table class="table table-striped table-hover table-sm table-bordered">
 			  <thead class="thead-light">
