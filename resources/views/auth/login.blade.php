@@ -25,12 +25,12 @@
             </div>
             <div class="form-group">
                 <button type="submit" class="submit">
-                    Masuk
+                    Login
                 </button>
             </div>
             <br>
             <div class="mt-5 text-center" align="center">
-                Belum punya akun? <a href="{{route('register')}}">Daftar</a>
+                Belum punya akun? <a href="{{route('register')}}">Register</a>
             </div>
         </form>
     </div>

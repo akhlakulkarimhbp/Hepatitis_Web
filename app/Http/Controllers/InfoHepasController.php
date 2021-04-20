@@ -47,7 +47,7 @@ class InfoHepasController extends Controller
         $infohepas->nama_info=$nama_info;
         $infohepas->isi_info=$isi_info;
         $infohepas->save();
-        return redirect()->route('infohepas.index')->with('toast_success', 'Data Berhasil ditambah');
+        return redirect()->route('infohepas.index')->with('success', 'Data Berhasil disimpan');
     }
 
     /**
@@ -81,7 +81,7 @@ class InfoHepasController extends Controller
     {
         $info_hepas=InfoHepas::findorfail($id);
         $info_hepas->update($request->all());
-        return redirect()->route('infohepas.index');
+        return redirect()->route('infohepas.index')->with('success', 'Data Berhasil diubah');
     }
 
     /**
@@ -94,6 +94,6 @@ class InfoHepasController extends Controller
     {
         $info_hepas=InfoHepas::findorfail($id);
         $info_hepas->delete();
-        return back();
+        return back()->with('success', 'Data Berhasil dihapus');
     }
 }

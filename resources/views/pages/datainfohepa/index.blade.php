@@ -38,6 +38,7 @@
       @endforeach
       </tbody>
       </table>
+      @include('sweetalert::alert')
       </div><!-- /.col -->
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->

@@ -13,8 +13,10 @@
 			  <thead class="thead-light">
 				<tr>
         <th>Id</th>
+        <!-- 
 					<th>Tahun</th>
 					<th>Kecamatan</th>
+        -->
           <th>Rumah Sehat</th>
           <th>Air Bersih</th>
           <th>Penduduk</th>
@@ -23,6 +25,7 @@
 					<th>Aksi</th>
 				</tr>
 			</thead>
+      @include('sweetalert::alert')
       </div><!-- /.col -->
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->

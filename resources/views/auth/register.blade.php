@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="{{ asset('css/style-login.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/1.0.3/bootstrap-show-password.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hepatitis A</title>
 </head>
@@ -13,7 +13,6 @@
         <p class="regis" align="center">REGISTER</p>
         <form method="POST" action="{{ route('register') }}" class="form1">
             @csrf
-
             <div class="form-group">
                 <input id="name" class="email form-control" type="text" placeholder="Full Name" name="name"
                     value="{{ old('name') }}" required>
@@ -34,15 +33,12 @@
                     placeholder="Password Confirmation" name="password_confirmation" required
                     autocomplete="new-password">
             </div>
-
             <div class="form-group">
-                <button type="submit" class="submit">
-                    Register
-                </button>
+                <button type="submit" class="submit">Register</button>
             </div>
             <br>
-            <div class="mt-5 text-center" align="center">
-                Sudah punya akun? <a href="{{ route('login') }}">Masuk</a>
+            <div class="sm-3 r" align="center">Sudah punya akun? 
+            <a href="{{ route('login') }}">Login</a>
             </div>
         </form>
     </div>

@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-12">
-            <button class="btn btn-success">Tambah</button>
+            <button class="btn btn-success">Simpan data</button>
             <a class="btn btn-success " href="{{ url('/datainfohepa') }}">Kembali</a>
         </div>
       </div><!-- /.col -->
