@@ -15,7 +15,8 @@ class DataKriteriaController extends Controller
      */
     public function index()
     {
-        //
+        $data_kriteria=DataKriteria::all();
+        return view('pages.datakriteria.index', compact('data_kriteria'));
     }
 
     /**
@@ -25,7 +26,7 @@ class DataKriteriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.datakriteria.create');
     }
 
     /**
@@ -36,7 +37,20 @@ class DataKriteriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $air_bersih= $request->air_bersih;
+        $kasus= $request->kasus;
+        $penduduk= $request->penduduk;
+        $sanitasi= $request->sanitasi;
+        $rumah_sehat= $request->rumah_sehat;
+        $datakriteria = new DataKriteria;
+        $datakriteria->air_bersih=$air_bersih;
+        $datakriteria->kasus=$kasus;
+        $datakriteria->penduduk=$penduduk;
+        $datakriteria->sanitasi=$sanitasi;
+        $datakriteria->rumah_sehat=$rumah_sehat;
+        $datakriteria->save();
+        return redirect()->route('datakriteria.index')->with('success', 'Data Berhasil disimpan');
+
     }
 
     /**
@@ -45,10 +59,6 @@ class DataKriteriaController extends Controller
      * @param  \App\Models\Datakriteria  $datakriteria
      * @return \Illuminate\Http\Response
      */
-    public function show(Datakriteria $datakriteria)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -56,9 +66,10 @@ class DataKriteriaController extends Controller
      * @param  \App\Models\Datakriteria  $datakriteria
      * @return \Illuminate\Http\Response
      */
-    public function edit(Datakriteria $datakriteria)
+    public function edit($id)
     {
-        //
+        $data_kriteria = DataKriteria::findorfail($id);
+        return view('pages.datakriteria.edit',compact('data_kriteria'));
     }
 
     /**
@@ -68,9 +79,11 @@ class DataKriteriaController extends Controller
      * @param  \App\Models\Datakriteria  $datakriteria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Datakriteria $datakriteria)
+    public function update(Request $request, $id)
     {
-        //
+        $data_kriteria=DataKriteria::findorfail($id);
+        $data_kriteria->update($request->all());
+        return redirect()->route('datakriteria.index')->with('success', 'Data Berhasil diubah');
     }
 
     /**
@@ -79,8 +92,10 @@ class DataKriteriaController extends Controller
      * @param  \App\Models\Datakriteria  $datakriteria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Datakriteria $datakriteria)
+    public function delete($id)
     {
-        //
+        $datakriteria=DataKriteria::findorfail($id);
+        $datakriteria->delete();
+        return back()->with('success', 'Data Berhasil dihapus');
     }
 }
