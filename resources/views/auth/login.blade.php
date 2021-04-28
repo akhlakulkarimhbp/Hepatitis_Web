@@ -41,5 +41,5 @@
         <p class="kata4"> - HEPATITIC A RATE -</p>
     </div>
 </body>
-
+@include('sweetalert::alert')
 </html>

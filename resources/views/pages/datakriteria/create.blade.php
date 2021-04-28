@@ -10,7 +10,25 @@
         <form action="{{route ('datakriteria.store')}}" method="POST"> 
         @csrf
         <div class="row">
-        <div class="col-xs-3 col-sm-3 col-md-5">
+        <div class="col-xs-3 col-m-3 col-md-5">
+            <div class="form-group">
+                <strong>Tahun:</strong>
+                <select class="form-control" name="id_tahun" id="id_tahun">
+                <option disabled value>Pilih Tahun</option>
+                @foreach($tahun as $item)
+                <option value="{{ $item->id_tahun }}">{{ $item->tahun }}</option>
+                @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <strong>Kecamatan:</strong>
+                <select class="form-control" name="id_kecamatan" id="id_kecamatan">
+                <option disabled value>Pilih Kecamatan</option>
+                @foreach($kec as $item)
+                <option value="{{ $item->id_kecamatan }}">{{ $item->nama_kecamatan }}</option>
+                @endforeach
+                </select>
+            </div>
             <div class="form-group">
                 <strong>Air Bersih:</strong>
                 <input type="number" name="air_bersih" class="form-control" placeholder="Air Bersih">

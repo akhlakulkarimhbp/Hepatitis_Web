@@ -15,6 +15,10 @@ class CreateDatakriteriaTable extends Migration
     {
         Schema::create('datakriteria', function (Blueprint $table) {
             $table->id('id_kriteria');
+            $table->integer('id_tahun')->unsigned()->after('id_kriteria');
+            $table->foreign('id_tahun')->references('id_tahun')->on('tahun')->onUpdate('CASCADE')->onDelete('CASCADE');
+            $table->integer('id_kecamatan')->unsigned()->after('id_kriteria');
+            $table->foreign('id_kecamatan')->references('id_kecamatan')->on('kecamatan')->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->integer('rumah_sehat');
             $table->integer('air_bersih');
             $table->integer('penduduk');

@@ -13,6 +13,8 @@
 			    <thead class="thead-light">
 				    <tr>
             <th>Id</th>
+            <th>Tahun</th>
+            <th>Kecamatan</th>
             <th>Air Bersih</th>
             <th>Kasus</th>
             <th>Penduduk</th>
@@ -26,6 +28,12 @@
       <tr>
         <td>
         {{$loop->iteration}}
+        </td>
+        <td>
+          {{$data->tahun->tahun }}
+        </td>
+        <td>
+          {{$data->kecamatan->nama_kecamatan }}
         </td>
         <td>
           {{$data->air_bersih }}

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Datakriteria;
+use App\Models\Kecamatan;
+use App\Models\Tahun;
 
 class DataKriteriaController extends Controller
 {
@@ -15,7 +17,7 @@ class DataKriteriaController extends Controller
      */
     public function index()
     {
-        $data_kriteria=DataKriteria::all();
+        $data_kriteria=DataKriteria::with('tahun','kecamatan')->get();
         return view('pages.datakriteria.index', compact('data_kriteria'));
     }
 
@@ -26,7 +28,9 @@ class DataKriteriaController extends Controller
      */
     public function create()
     {
-        return view('pages.datakriteria.create');
+        $tahun=Tahun::all();
+        $kec=Kecamatan::all();
+        return view('pages.datakriteria.create', compact('tahun','kec'));
     }
 
     /**
@@ -37,12 +41,16 @@ class DataKriteriaController extends Controller
      */
     public function store(Request $request)
     {
+        $id_tahun= $request->id_tahun;
+        $id_kecamatan= $request->id_kecamatan;
         $air_bersih= $request->air_bersih;
         $kasus= $request->kasus;
         $penduduk= $request->penduduk;
         $sanitasi= $request->sanitasi;
         $rumah_sehat= $request->rumah_sehat;
         $datakriteria = new DataKriteria;
+        $datakriteria->id_tahun=$id_tahun;
+        $datakriteria->id_kecamatan=$id_kecamatan;
         $datakriteria->air_bersih=$air_bersih;
         $datakriteria->kasus=$kasus;
         $datakriteria->penduduk=$penduduk;
@@ -68,8 +76,10 @@ class DataKriteriaController extends Controller
      */
     public function edit($id)
     {
+        $tahun=Tahun::all();
+        $kec=Kecamatan::all();
         $data_kriteria = DataKriteria::findorfail($id);
-        return view('pages.datakriteria.edit',compact('data_kriteria'));
+        return view('pages.datakriteria.edit',compact('data_kriteria','tahun','kec'));
     }
 
     /**
