@@ -16,7 +16,11 @@
                 <select class="form-control" name="id_tahun" id="id_tahun">
                 <option disabled value>Pilih Tahun</option>
                 @foreach($tahun as $item)
+                @if($item->id_tahun==$data_kriteria->id_tahun)
+                <option value="{{ $item->id_tahun }}" selected >{{ $item->tahun }}</option>
+                @else
                 <option value="{{ $item->id_tahun }}">{{ $item->tahun }}</option>
+                @endif
                 @endforeach
                 </select>
             </div>
@@ -25,7 +29,11 @@
                 <select class="form-control" name="id_kecamatan" id="id_kecamatan">
                 <option disabled value>Pilih Kecamatan</option>
                 @foreach($kec as $item)
+                @if($item->id_kecamatan==$data_kriteria->id_kecamatan)
+                <option value="{{ $item->id_kecamatan }}" selected >{{ $item->nama_kecamatan }}</option>
+                @else
                 <option value="{{ $item->id_kecamatan }}">{{ $item->nama_kecamatan }}</option>
+                @endif
                 @endforeach
                 </select>
             </div>

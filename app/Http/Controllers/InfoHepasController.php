@@ -19,7 +19,7 @@ class InfoHepasController extends Controller
     }
     public function index()
     {
-        $info_hepas=InfoHepas::all();
+        $info_hepas=InfoHepas::orderBy('nama_info','ASC')->get();
         return view('pages.datainfohepa.index', compact('info_hepas'));
     }
 
