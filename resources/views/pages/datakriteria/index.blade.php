@@ -4,7 +4,7 @@
  <div class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
-      <div class="col-sm-9">
+      <div class="col-sm-12">
         <h1 class="m-0">Data Kriteria Hepatitis A</h1>
         <div class="float-left my-3">
           <a class="btn btn-success" href="{{ route('datakriteria.create') }}"> Tambah Data</a>
@@ -16,9 +16,9 @@
             <th>Tahun</th>
             <th>Kecamatan</th>
             <th>Air Bersih</th>
-            <th>Kasus</th>
-            <th>Penduduk</th>
-            <th>Sanitasi</th>
+            <th>Histori Kasus</th>
+            <th>Kepadatan Penduduk</th>
+            <th>Sanitasi Lingkungan</th>
             <th>Rumah Sehat</th>
             <th>Aksi</th>
             </tr>
