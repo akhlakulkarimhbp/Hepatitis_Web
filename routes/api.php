@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +21,4 @@ use Illuminate\Support\Facades\Route;
 
 */
 
-
+Route::get('/info-hepas', [ApiController::class, 'index']);
