@@ -51,8 +51,8 @@
           {{$data->rumah_sehat }}
         </td>
         <td>
-        <a class="btn btn-primary btn-sm"  href="{{ route('datakriteria.edit',$data->id_kriteria) }}" >Edit</a>
-        <a href="{{ route('datakriteria.delete',$data->id_kriteria) }}" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+        <a class="fa fa-pencil-square-o" aria-hidden="true"  href="{{ route('datakriteria.edit',$data->id_kriteria) }}" ></a>
+        <a href="{{ route('datakriteria.delete',$data->id_kriteria) }}" class="fa fa-trash-o" aria-hidden="true" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"></button>
         </td>
       </tr>
       @endforeach

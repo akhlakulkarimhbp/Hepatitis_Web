@@ -31,8 +31,8 @@
           {{$info->isi_info }}
         </td>
         <td>
-        <a class="btn btn-primary btn-sm" href="{{ route('infohepas.edit',$info->id_info) }}" >Edit</a>
-        <a href="{{ route('infohepas.delete',$info->id_info) }}" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+        <a class="fa fa-pencil-square-o" aria-hidden="true"  href="{{ route('infohepas.edit',$info->id_info) }}" ></a>
+        <a href="{{ route('infohepas.delete',$info->id_info) }}" class="fa fa-trash-o" aria-hidden="true" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"></button>
         </td>
       </tr>
       @endforeach

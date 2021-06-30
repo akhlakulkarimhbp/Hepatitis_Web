@@ -16,7 +16,6 @@ class CreateKecamatanTable extends Migration
         Schema::create('kecamatan', function (Blueprint $table) {
             $table->id('id_kecamatan');
             $table->string('nama_kecamatan');
-            $table->string('geometri');
             $table->timestamps();
         });
     }

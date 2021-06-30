@@ -17,7 +17,7 @@ class DataKriteriaController extends Controller
      */
     public function index()
     {
-        $data_kriteria=DataKriteria::with('tahun','kecamatan')->orderBy('id_tahun','DESC')->orderBy('id_kecamatan','ASC')->get();
+        $data_kriteria=DataKriteria::with('tahun','kecamatan')->orderBy('id_tahun','ASC')->orderBy('id_kecamatan','ASC')->get();
         return view('pages.datakriteria.index', compact('data_kriteria'));
     }
 
