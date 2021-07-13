@@ -24,7 +24,32 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.datakriteria.index');
     });
     */ 
-    
+    /* grafik hepatitis a*/ 
+    Route::get('/grafik2017', function () {
+        return view('pages.grafik.index2017');
+    });
+    Route::get('/grafik2018', function () {
+        return view('pages.grafik.index2018');
+    });
+    Route::get('/grafik2019', function () {
+        return view('pages.grafik.index2019');
+    });
+
+
+
+    /* hasil kluster hepatitis a*/ 
+    Route::get('/hasilcluster2017', function () {
+        return view('pages.hasil cluster.index2017');
+    });
+
+    Route::get('/hasilcluster2018', function () {
+        return view('pages.hasil cluster.index2018');
+    });
+
+    Route::get('/hasilcluster2019', function () {
+        return view('pages.hasil cluster.index2019');
+    });
+
     /* data informasi hepatitis a*/ 
     Route::get('/datainfohepa',  [InfoHepasController::class, 'index'])->name('infohepas.index');
     Route::get('createdata', [InfoHepasController::class, 'create'])->name('infohepas.create');

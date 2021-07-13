@@ -11,19 +11,6 @@
           {{ csrf_field()}}
         <div class="row">
         <div class="col-xs-3 col-sm-3 col-md-5">
-        <div class="form-group">
-                <strong>Tahun:</strong>
-                <select class="form-control" name="id_tahun" id="id_tahun">
-                <option disabled value>Pilih Tahun</option>
-                @foreach($tahun as $item)
-                @if($item->id_tahun==$data_kriteria->id_tahun)
-                <option value="{{ $item->id_tahun }}" selected >{{ $item->tahun }}</option>
-                @else
-                <option value="{{ $item->id_tahun }}">{{ $item->tahun }}</option>
-                @endif
-                @endforeach
-                </select>
-            </div>
             <div class="form-group">
                 <strong>Kecamatan:</strong>
                 <select class="form-control" name="id_kecamatan" id="id_kecamatan">
@@ -36,6 +23,10 @@
                 @endif
                 @endforeach
                 </select>
+            </div>
+            <div class="form-group">
+                <strong>Tahun:</strong>
+                <input type="number" name="tahun" class="form-control" placeholder="Tahun"  value="{{$data_kriteria->air_bersih}}">
             </div>
             <div class="form-group">
                 <strong>Air Bersih:</strong>

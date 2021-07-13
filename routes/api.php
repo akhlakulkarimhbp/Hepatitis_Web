@@ -22,3 +22,8 @@ use App\Http\Controllers\Api\ApiController;
 */
 
 Route::get('/info-hepas', [ApiController::class, 'index']);
+Route::get('/info-hepas/{id}', [ApiController::class, 'show']);
+
+
+
+

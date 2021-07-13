@@ -12,15 +12,6 @@
         <div class="row">
         <div class="col-xs-3 col-m-3 col-md-5">
             <div class="form-group">
-                <strong>Tahun:</strong>
-                <select class="form-control" name="id_tahun" id="id_tahun">
-                <option disabled value>Pilih Tahun</option>
-                @foreach($tahun as $item)
-                <option value="{{ $item->id_tahun }}">{{ $item->tahun }}</option>
-                @endforeach
-                </select>
-            </div>
-            <div class="form-group">
                 <strong>Kecamatan:</strong>
                 <select class="form-control" name="id_kecamatan" id="id_kecamatan">
                 <option disabled value>Pilih Kecamatan</option>
@@ -28,6 +19,10 @@
                 <option value="{{ $item->id_kecamatan }}">{{ $item->nama_kecamatan }}</option>
                 @endforeach
                 </select>
+            </div>
+            <div class="form-group">
+                <strong>Tahun:</strong>
+                <input type="number" name="tahun" class="form-control" placeholder="Tahun">
             </div>
             <div class="form-group">
                 <strong>Air Bersih:</strong>
