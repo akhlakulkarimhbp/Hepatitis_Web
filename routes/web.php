@@ -20,6 +20,16 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('pages.dashboard.dashboard');
     });
+
+    /* map 2018*/ 
+    Route::get('/map2018', function () {
+        return view('pages.dashboard.map2018');
+    });
+
+    Route::get('/map2019', function () {
+        return view('pages.dashboard.map2019');
+    });
+
     /* 
     Route::get('/datakriteria', function () {
         return view('pages.datakriteria.index');
