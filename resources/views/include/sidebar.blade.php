@@ -56,7 +56,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{ url('/hasilcluster2017') }}" class="nav-link">
+                        <a href="{{ url('/cluster2017') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>2017</p>
                         </a>

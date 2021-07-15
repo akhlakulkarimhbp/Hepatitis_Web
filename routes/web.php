@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InfoHepasController;
 use App\Http\Controllers\DataKriteriaController;
+use App\Http\Controllers\KmeansController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +39,8 @@ Route::middleware(['auth'])->group(function () {
 
 
     /* hasil kluster hepatitis a*/ 
-    Route::get('/hasilcluster2017', function () {
-        return view('pages.hasil cluster.index2017');
-    });
+    
+    Route::get('/cluster2017',  [KmeansController::class, 'data2017'])->name('cluster2017');
 
     Route::get('/hasilcluster2018', function () {
         return view('pages.hasil cluster.index2018');

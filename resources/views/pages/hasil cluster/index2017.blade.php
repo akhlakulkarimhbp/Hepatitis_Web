@@ -11,14 +11,28 @@
 			    <thead class="thead-light">
 				    <tr>
             <th>Kecamatan</th>
-            <th>Air Bersih</th>
             <th>Histori Kasus</th>
-            <th>Kepadatan Penduduk</th>
-            <th>Sanitasi Lingkungan</th>
             <th>Rumah Sehat</th>
+            <th>Sanitasi Lingkungan</th>
+            <th>Kepadatan Penduduk</th>
+            <th>Air Bersih</th>
             <th>Cluster</th>
             </tr>
 			    </thead>
+          <tbody>
+              @foreach ($collections as $data)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $data->kecamatan }}</td>
+                            <td>{{ $data->jml_kasus }}</td>
+                            <td>{{ $data->jml_rumah_sehat }}</td>
+                            <td>{{ $data->jml_sanitasi }}</td>
+                            <td>{{ $data->jml_penduduk }}</td>
+                            <td>{{ $data->jml_air_bersih }}</td>
+                            <td>{{ $data->cluster }}</td>                           
+                        </tr>
+                    @endforeach
+            </tbody>
           </table>
       </div><!-- /.col -->
     </div><!-- /.row -->
