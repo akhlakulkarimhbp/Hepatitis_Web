@@ -10,6 +10,7 @@
           <table class="table table-striped table-hover table-sm table-bordered">
 			    <thead class="thead-light">
 				    <tr>
+            <th>No</th>  
             <th>Kecamatan</th>
             <th>Histori Kasus</th>
             <th>Rumah Sehat</th>
@@ -23,13 +24,13 @@
               @foreach ($collections as $data)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $data->kecamatan }}</td>
-                            <td>{{ $data->jml_kasus }}</td>
-                            <td>{{ $data->jml_rumah_sehat }}</td>
-                            <td>{{ $data->jml_sanitasi }}</td>
-                            <td>{{ $data->jml_penduduk }}</td>
-                            <td>{{ $data->jml_air_bersih }}</td>
-                            <td>{{ $data->cluster }}</td>                           
+                            <td>{{ $data['kecamatan'] }}</td>
+                            <td>{{ $data['jml_kasus'] }}</td>
+                            <td>{{ $data['jml_rumah_sehat'] }}</td>
+                            <td>{{ $data['jml_sanitasi'] }}</td>
+                            <td>{{ $data['jml_penduduk'] }}</td>
+                            <td>{{ $data['jml_air_bersih'] }}</td>
+                            <td>{{ $data['cluster'] }}</td>                           
                         </tr>
                     @endforeach
             </tbody>

@@ -4,106 +4,106 @@
     </a>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview"  role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
                <ul class="nav nav-treeview">
-                  <li class="nav-item">
+                  <li class="nav-item menu">
                         <a href="#" class="nav-link">
                           <i class="nav-icon fa fa-map "></i>                  
                             <p>Pemetaan Map</p>
                             <i class="right fas fa-angle-left"></i>
                         </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ url('/') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2017</p>
-                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ url('/') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>2017</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ url('/map2018') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>2018</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ url('/map2019') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>2019</p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                </ul>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="/map2018" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2018</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="/map2019" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2019</p>
-                        </a>
-                    </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link ">
-                  <i class="nav-icon fa fa-bar-chart"></i>
-                  <p>Grafik Kerawanan</p>
-                  <i class="right fas fa-angle-left"></i>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ url('/grafik2017') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2017</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ url('/grafik2018') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2018</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ url('/grafik2019') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2019</p>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item nav-treeview">
-                <a href="" class="nav-link ">
-                    <i class="nav-icon fas fa-table"></i>
-                    <p>
-                        Hasil Clustering
+                <li class="nav-item">
+                        <a href="#" class="nav-link ">
+                        <i class="nav-icon fa fa-bar-chart"></i>
+                        <p>Grafik Kerawanan</p>
                         <i class="right fas fa-angle-left"></i>
-                    </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ url('/cluster2017') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2017</p>
                         </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ url('/grafik2017') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>2017</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ url('/grafik2018') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>2018</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ url('/grafik2019') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>2019</p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                </ul>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ url('/hasilcluster2018') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2018</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ url('/hasilcluster2019') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>2019</p>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+                <li class="nav-item nav-treeview">
+                    <a href="" class="nav-link ">
+                        <i class="nav-icon fas fa-table"></i>
+                        <p>
+                            Hasil Clustering
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('hasilcluster2017') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>2017</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('hasilcluster2018') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>2018</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('hasilcluster2019') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>2019</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
               <li class="nav-item ">
                 <a href="{{ url('/datakriteria') }}" class="nav-link ">
                   <i class="nav-icon fas fa-database"></i>
@@ -120,5 +120,6 @@
           </li>
         </ul>
         </nav>
+
       
     <!-- /.sidebar -->

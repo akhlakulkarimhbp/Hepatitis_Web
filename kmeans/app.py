@@ -55,7 +55,7 @@ def tupple_to_list(data):
 def get_data(table, field:tuple, tahun):
     myConnection = mysql.connect(host=hostname, user=username, password=password, database=database)
     list_id_kecamatan = tupple_to_list(get_id_kecamatan())
-    data_rasio = np.zeros((12,5))
+    data_rasio = np.zeros((12,4))
     for (ds, c_row) in zip(list_id_kecamatan, range(0, 12)):
         sql = "SELECT "
         for item in field:

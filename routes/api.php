@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApiController;
+use App\Http\Controllers\KmeansController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\Api\ApiController;
 });
 
 */
+
 
 Route::get('/info-hepas', [ApiController::class, 'index']);
 Route::get('/info-hepas/{id}', [ApiController::class, 'show']);

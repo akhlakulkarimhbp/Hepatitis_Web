@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use App\Http\Controllers\InfoHepasController;
 use App\Http\Controllers\DataKriteriaController;
 use App\Http\Controllers\KmeansController;
@@ -39,6 +40,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/grafik2017', function () {
         return view('pages.grafik.index2017');
     });
+    
     Route::get('/grafik2018', function () {
         return view('pages.grafik.index2018');
     });
@@ -46,19 +48,25 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.grafik.index2019');
     });
 
-
+    Route::get('/hasilcluster2017', 'App\Http\Controllers\KmeansController@hasil1')->name('hasilcluster2017');
+    Route::get('/hasilcluster2018', 'App\Http\Controllers\KmeansController@hasil2')->name('hasilcluster2018');
+    Route::get('/hasilcluster2019', 'App\Http\Controllers\KmeansController@hasil3')->name('hasilcluster2019');
 
     /* hasil kluster hepatitis a*/ 
-    
-    Route::get('/cluster2017',  [KmeansController::class, 'data2017'])->name('cluster2017');
 
-    Route::get('/hasilcluster2018', function () {
-        return view('pages.hasil cluster.index2018');
-    });
+    //  Route::get('/hasilcluster2017', function () {
+    //      return view('pages.hasil cluster.index2017');
+    //  });
 
-    Route::get('/hasilcluster2019', function () {
-        return view('pages.hasil cluster.index2019');
-    });
+    // Route::get('/hasilcluster2017', "KmeansController@list");
+
+    // Route::get('/hasilcluster2018', function () {
+    //     return view('pages.hasil cluster.index2018');
+    // });
+
+    // Route::get('/hasilcluster2019', function () {
+    //     return view('pages.hasil cluster.index2019');
+    // });
 
     /* data informasi hepatitis a*/ 
     Route::get('/datainfohepa',  [InfoHepasController::class, 'index'])->name('infohepas.index');

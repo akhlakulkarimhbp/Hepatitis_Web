@@ -37,27 +37,7 @@
         center: [-8.13333, 111.16667],
         zoom: 11.4,
         layers: [peta]
-    });
-    
-    
-        var geojson=[];
-        
-            $.ajax({ 
-                dataType:'JSON',
-                success:function(data){      
-                $.getJSON("{{asset('assets')}}/sby.geojson", function(data_coordinate){
-                    for(i=0;i<31;i++){
-                      var kecamatan = data_coordinate.features[i].properties.kecamatan;
-                      console.log(kecamatan);
-                    }
-                      geojson[kecamatan]=L.geoJSON(data_coordinate,{
-                      onEachFeature: onEachFeature,
-                      style: style      
-                      }).addTo(mapid);
-                    });
-                }
-            });
-      
+    });      
       </script>
 
           
