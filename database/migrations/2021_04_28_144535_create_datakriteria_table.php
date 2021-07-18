@@ -18,11 +18,11 @@ class CreateDatakriteriaTable extends Migration
             $table->unsignedInteger('id_kecamatan');
             $table->foreign('id_kecamatan')->references('id_kecamatan')->on('kecamatan')->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->integer('tahun');
-            $table->double('rumah_sehat');
-            $table->double('air_bersih');
-            $table->double('penduduk');
-            $table->double('kasus');
-            $table->double('sanitasi');
+            $table->float('rumah_sehat');
+            $table->float('air_bersih');
+            $table->float('penduduk');
+            $table->float('kasus');
+            $table->float('sanitasi');
             $table->timestamps();
         });
     }

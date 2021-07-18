@@ -31,6 +31,15 @@
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <!--[if lt IE 9]>
+    <script src="https://code.highcharts.com/modules/oldie-polyfills.js"></script>
+    <![endif]-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://code.highcharts.com/modules/oldie.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/js/themes/gray.js"></script>
    
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -89,7 +98,8 @@
 <script src="{{ asset('dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('dist/js/pages/dashboard.js')}}"></script>
-@stack('javascript')
+
+
 
 </body>
 </html>

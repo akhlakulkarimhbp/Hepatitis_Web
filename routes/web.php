@@ -37,22 +37,18 @@ Route::middleware(['auth'])->group(function () {
     });
     */ 
     /* grafik hepatitis a*/ 
-    Route::get('/grafik2017', function () {
-        return view('pages.grafik.index2017');
-    });
+    Route::get('/grafik2017', 'App\Http\Controllers\KmeansController@grafik1' );
+    Route::get('/grafik2018', 'App\Http\Controllers\KmeansController@grafik2' );    
+    Route::get('/grafik2019', 'App\Http\Controllers\KmeansController@grafik3' );    
     
-    Route::get('/grafik2018', function () {
-        return view('pages.grafik.index2018');
-    });
-    Route::get('/grafik2019', function () {
-        return view('pages.grafik.index2019');
-    });
+    
 
+    /* hasil kluster hepatitis a*/ 
     Route::get('/hasilcluster2017', 'App\Http\Controllers\KmeansController@hasil1')->name('hasilcluster2017');
     Route::get('/hasilcluster2018', 'App\Http\Controllers\KmeansController@hasil2')->name('hasilcluster2018');
     Route::get('/hasilcluster2019', 'App\Http\Controllers\KmeansController@hasil3')->name('hasilcluster2019');
 
-    /* hasil kluster hepatitis a*/ 
+
 
     //  Route::get('/hasilcluster2017', function () {
     //      return view('pages.hasil cluster.index2017');
