@@ -41,7 +41,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/grafik2018', 'App\Http\Controllers\KmeansController@grafik2' );    
     Route::get('/grafik2019', 'App\Http\Controllers\KmeansController@grafik3' );    
     
-    
 
     /* hasil kluster hepatitis a*/ 
     Route::get('/hasilcluster2017', 'App\Http\Controllers\KmeansController@hasil1')->name('hasilcluster2017');
