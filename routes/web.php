@@ -18,18 +18,18 @@ use App\Http\Controllers\KmeansController;
 */
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', function () {
-        return view('pages.dashboard.dashboard');
-    });
+    // Route::get('/', function () {
+    //     return view('pages.dashboard.dashboard');
+    // });
 
     /* map 2018*/ 
-    Route::get('/map2018', function () {
-        return view('pages.dashboard.map2018');
-    });
+    // Route::get('/map2018', function () {
+    //     return view('pages.dashboard.map2018');
+    // });
 
-    Route::get('/map2019', function () {
-        return view('pages.dashboard.map2019');
-    });
+    // Route::get('/map2019', function () {
+    //     return view('pages.dashboard.map2019');
+    // });
 
     /* 
     Route::get('/datakriteria', function () {
@@ -47,6 +47,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/hasilcluster2018', 'App\Http\Controllers\KmeansController@hasil2')->name('hasilcluster2018');
     Route::get('/hasilcluster2019', 'App\Http\Controllers\KmeansController@hasil3')->name('hasilcluster2019');
 
+    Route::get('/', 'App\Http\Controllers\KmeansController@mappeta2017')->name('mappeta2017');
+    Route::get('/map2018', 'App\Http\Controllers\KmeansController@mappeta2018')->name('mappeta2018');
+    Route::get('/map2019', 'App\Http\Controllers\KmeansController@mappeta2019')->name('mappeta2019');
 
 
     //  Route::get('/hasilcluster2017', function () {

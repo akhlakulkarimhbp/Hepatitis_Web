@@ -33,12 +33,9 @@ class KmeansController extends Controller
         $dataclusterRendah=[];
         $dataclusterSedang=[];
         $dataclusterTinggi=[];
-        
         $data = json_decode(file_get_contents('http://127.0.0.1:5000/data/2017'), true);
-        
         foreach($data as $i){
-            array_push($datakecamatan,$i['kecamatan']);
-            
+            array_push($datakecamatan,$i['kecamatan']);   
             if($i['cluster'] == 'Rendah') { 
                 array_push($dataclusterRendah, 1);
                 array_push($dataclusterSedang, 0);
@@ -107,5 +104,18 @@ class KmeansController extends Controller
             }
         return view('pages.grafik.index2019',['datakecamatan'=>$datakecamatan, 'clusterRendah'=>$dataclusterRendah, 'clusterSedang'=>$dataclusterSedang, 'clusterTinggi'=>$dataclusterTinggi]); 
     }
-
+    
+    public function mappeta2017()
+    {
+        return view('pages.dashboard.dashboard');
+    }
+    public function mappeta2018()
+    {
+        return view('pages.dashboard.map2018');
+    }
+    public function mappeta2019()
+    {
+        return view('pages.dashboard.map2019');
+    }
+    
 }

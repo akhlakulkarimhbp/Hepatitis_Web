@@ -13,14 +13,14 @@ class ApiController extends Controller
     {
         $data = InfoHepas::all();
         // return ApiResource::collection($data);
-	return response()->json($data);
+	    return response()->json($data);
     }
 
     public function show($id)
     {
-	$data = InfoHepas::find($id);
+	    $data = InfoHepas::find($id);
         // return ApiResource::collection($data);
-	return response()->json($data);
+	    return response()->json($data);
 
     }
     
