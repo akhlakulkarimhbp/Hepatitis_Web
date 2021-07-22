@@ -149,7 +149,18 @@
         });
     }
      
-</script>        
+</script>   
+<div class="d-flex justify-content-center">
+    <div class="col-lg-3 " >
+<i class="far fa-square" style="background-color:#00ff00"  ></i>
+Rendah
+<i class="far fa-square" style="background-color:#FFFF00"  ></i>
+Sedang
+<i class="far fa-square" style="background-color:#FF0000"  ></i>
+Tinggi
+
+    </div>
+</div>     
 
           
 @endsection

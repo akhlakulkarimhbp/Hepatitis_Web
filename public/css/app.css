@@ -8200,6 +8200,9 @@ button.bg-dark:focus {
     float: none !important;
   }
 }
+.kotak1 {
+  background-color: #F3F3F3;
+}
 
 @media (min-width: 768px) {
   .float-md-left {
